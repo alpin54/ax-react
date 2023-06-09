@@ -1,0 +1,83 @@
+React JS 1
+--
+
+/* ==========================================================================
+   Objective
+   ========================================================================== */
+
+  - Menambah skill front-end developer di level intermediate
+  - Memahami pembuatan website dengan ReactJS
+  - Memahami cara membuat component state less ataupun state full
+  - Memahami cara membuat function helper/util
+  - Memahami cara membuat hooks
+  - Memahami cara membuat routing
+  - Memahami cara membuat pages
+  - Memahami cara integrasi dengan API
+  - Memahami state management (Redux, React Context, Zustand)
+  - Memahami 1 website dengan ReactJs, minimal 1 landing page
+
+  /* ==========================================================================
+   Key Result
+   ============================================================================ */
+
+  - Mempelajari ReactJS
+  - Mempelajari cara
+  - Mempelajari cara membuat function helper/util
+  - Mempelajari cara membuat hooks
+  - Mempelajari cara membuat routing
+  - Mempelajari cara membuat pages
+  - Mempelajari cara integrasi dengan API
+  - Mempelajari state management (Redux, React Context, Zustand)
+  - Praktek membuat website dengan ReactJS
+
+/* ==========================================================================
+   Getting Started ReactJS
+   ========================================================================== */
+
+Prerequisite
+--
+  - Hasur paham Basic Front-end Developer (HTML, CSS, JS)
+  - Install Node JS (include npm)/Install yarn
+
+Next Step
+--
+  - Perlu diperhatikan version NodeJS
+    $ node -v /* check version NodeJS*/
+    $ npm -v /* check version npm*/
+  - create-react-app (https://create-react-app.dev/docs/getting-started) -> pastikan version npm 5.2+
+
+Quick Started (Open Terminal)
+--
+1. Create Project
+  $ npx create-react-app react-js /* with npx */
+  $ npm init create-react-app react-js /* with npm */
+  $ yarn create create-react-app react-js /* with yarn */
+2. Masuk Directory Project
+  $ cd directory-project
+2. Running Project
+  $ npm run start
+
+/* ========================================================================== */
+** dependencies    = package yang harus ada di dalam sebuah project yg di mana ketika tidak ada maka project tersebut tidak dapat berjalan 
+** devDependencies = package yang di gunakan hanya untuk development
+/* ========================================================================== */
+
+/* ==========================================================================
+   Membuat component state less ataupun state full
+   ========================================================================== */
+
+State less
+--
+
+
+State full
+--
+
+/* ==========================================================================
+   Membuat component state less ataupun state full
+   ========================================================================== */
+
+Step
+--
+1. Masuk terminal > cd project-name
+$ npm install react-router-dom

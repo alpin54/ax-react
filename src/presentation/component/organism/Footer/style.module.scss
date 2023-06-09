@@ -1,0 +1,203 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.footer {
+  $f: &;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  &Top {
+    padding: 64px 0 48px;
+    #{$f} {
+      &Inner {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -48px;
+          width: 100%;
+          height: 1px;
+          background-color: #414141;
+        }
+      }
+    }
+  }
+  &Mid {
+    padding: 48px 0 64px;
+  }
+  &Bot {
+    padding: 24px 0;
+    background-color: #1a1a1a;
+  }
+  &Inner {
+    @include clearfix;
+  }
+  &Txt,
+  &Form {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+  &Txt {
+    color: #fff;
+    &Title {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin-bottom: 8px;
+    }
+    &Desc {
+      max-width: 444px;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin-bottom: 0;
+    }
+  }
+  &Input {
+    display: inline-block;
+    outline: 0;
+    width: calc(100% - 144px);
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    padding: 14px 16px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+  &Button {
+    display: inline-block;
+    outline: 0;
+    width: 136px;
+    border: 1px solid #414141;
+    margin-left: 8px;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #414141;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+    }
+  }
+  &About {
+    float: left;
+    max-width: 372px;
+    margin-right: 240px;
+    &Desc {
+      margin-bottom: 32px;
+      span {
+        font-style: italic;
+      }
+    }
+  }
+  &Logo {
+    margin-bottom: 32px;
+    &Link {
+      display: block;
+      text-decoration: none;
+    }
+    &Img {
+      display: block;
+      height: 64px;
+    }
+  }
+  &Sosmed {
+    font-size: 0;
+    &Title {
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 16px;
+      margin-bottom: 0;
+    }
+    &List {
+      display: inline-block;
+      vertical-align: middle;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include clearfix;
+    }
+    &Item {
+      float: left;
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &Link {
+      display: block;
+      text-decoration: none;
+      img {
+        display: block;
+        height: 24px;
+      }
+    }
+  }
+  &Nav {
+    float: right;
+    @include clearfix;
+    &Item {
+      float: left;
+      margin-right: 80px;
+      &:last-child {
+        margin-right: 0;
+        ul li {
+          &:first-child {
+            color: #fff;
+          }
+          &:last-child {
+            max-width: 264px;
+          }
+        }
+      }
+    }
+  }
+  &Title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+  }
+  &Menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &Item {
+      color: #a0a0a0;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &Link {
+      display: block;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &Author,
+  &Copyright {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 0;
+  }
+  &Author {
+    float: left;
+    span {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+  &Copyright {
+    float: right;
+  }
+}

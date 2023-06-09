@@ -1,0 +1,24 @@
+FE Architecture 2
+--
+
+Objective
+--
+  - Memahami struktur directory FE
+  - Memahami fungsi directory
+  - Memahami konsep architecture
+  - Memahami konsep atomic design
+  - Project termanage dengan baik
+
+Key Result
+--
+  - Mempelajari struktur directory FE
+  - Mempelajari fungsi directory
+  - Mempelajari konsep architecture
+  - Mempelajari konsep atomic design
+
+/* ==========================================================================
+   Clean Architecture X Atomic Design
+   ========================================================================== */
+
+  - Clean Architecture: Integrasi API/Functionality JS
+  - Atomic Design: User Interface

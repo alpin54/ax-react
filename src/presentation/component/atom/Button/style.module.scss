@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Elements Button
+  ========================================================================== */
+
+@mixin btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 136px;
+  padding: 10px 48px;
+  border-radius: 20px;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid transparent;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  &Primary {
+    @include btn;
+    background-color: #111;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: #111;
+      color: #111;
+    }
+  }
+  &Secondary {
+    @include btn;
+    background-color: #fff;
+    color: #111;
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+}

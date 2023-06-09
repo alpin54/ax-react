@@ -1,0 +1,55 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.testimony {
+  padding: 80px 0;
+  background-color: #f3f3f3;
+  overflow: hidden;
+  &Inner {
+    font-size: 0;
+  }
+  &Txt {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 280px;
+    margin-right: 180px;
+  }
+  &List {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 300px;
+  }
+  &Slidder {
+    position: absolute;
+    width: 100vh;
+    font-size: 0;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      display: none;
+      width: 0;
+    }
+  }
+  &Caption {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 0;
+  }
+  &Title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+}

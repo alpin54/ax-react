@@ -1,0 +1,41 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.service {
+  padding: 60px 0 32px;
+  &Head {
+    margin-bottom: 32px;
+    @include clearfix;
+  }
+  &Body {
+    margin-left: -12px;
+    margin-right: -12px;
+    @include clearfix;
+  }
+  &Caption {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 0;
+  }
+  &Title {
+    float: left;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  &Btn {
+    float: right;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #707070;
+    }
+  }
+}
