@@ -217,7 +217,7 @@ const dataSectionTestimony = {
 const Home = () => {
   return (
     <Default activeMenu="home">
-      <div>
+      <>
         <HeroBanner data={dataBanner} />
         <Overview data={dataOverview} />
         <ServiceProcess data={dataServiceProcess} />
@@ -225,7 +225,7 @@ const Home = () => {
         <SectionService data={dataSectionService} />
         <SectionProduct data={dataSectionProduct} />
         <SectionTestimony data={dataSectionTestimony} />
-      </div>
+      </>
     </Default>
   );
 };
