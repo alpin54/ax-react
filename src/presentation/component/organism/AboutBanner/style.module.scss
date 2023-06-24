@@ -1,0 +1,69 @@
+@import "application/style/_asset.scss";
+
+.banner {
+  margin: 24px 0;
+  &Inner {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: zi(about-banner-before);
+      width: 100%;
+      height: 100%;
+      background-color: color(grey, 2);
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: zi(about-banner-after);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &Primary {
+    .text {
+      bottom: auto;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  bottom: 64px;
+  left: 64px;
+  z-index: zi(about-banner-txt);
+  color: color(white, 1);
+}
+
+.title,
+.tagline {
+  @include font-size(48);
+  font-weight: fw(bold);
+  margin-bottom: 0;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.desc {
+  @include font-size(16);
+  font-weight: fw(regular);
+  margin-bottom: 24px;
+}
+

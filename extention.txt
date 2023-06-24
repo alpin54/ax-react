@@ -1,0 +1,9 @@
+editor config *
+elm emmet *
+error lens
+eslint
+gitlens
+import cost
+mitril emmet
+pretier code format
+pretier eslint

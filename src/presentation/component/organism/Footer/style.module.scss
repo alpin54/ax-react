@@ -1,10 +1,4 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-}
+@import "application/style/_asset.scss";
 
 .footer {
   $f: &;
@@ -12,192 +6,195 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #111;
-  color: #fff;
-  &Top {
-    padding: 64px 0 48px;
-    #{$f} {
-      &Inner {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -48px;
-          width: 100%;
-          height: 1px;
-          background-color: #414141;
-        }
-      }
-    }
-  }
-  &Mid {
-    padding: 48px 0 64px;
-  }
-  &Bot {
-    padding: 24px 0;
-    background-color: #1a1a1a;
-  }
+  background-color: color(primary);
+  color: color(white, 1);
   &Inner {
     @include clearfix;
   }
-  &Txt,
-  &Form {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
-  }
-  &Txt {
-    color: #fff;
-    &Title {
-      font-size: 2.4rem;
-      line-height: 3.2rem;
-      margin-bottom: 8px;
-    }
-    &Desc {
-      max-width: 444px;
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      margin-bottom: 0;
+}
+
+.top {
+  padding: 64px 0 48px;
+  .footer {
+    &Inner {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -48px;
+        width: 100%;
+        height: 1px;
+        background-color: color(black, 2);
+      }
     }
   }
+}
+
+.middle {
+  padding: 48px 0 64px;
+}
+
+.bottom {
+  padding: 24px 0;
+  background-color: color(black, 1);
+}
+
+.text,
+.form {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.text {
+  color: color(white, 1);
+  &Title {
+    @include font-size(24);
+    margin-bottom: 8px;
+  }
+  &Desc {
+    max-width: 444px;
+    @include font-size(16);
+    margin-bottom: 0;
+  }
+}
+
+.form {
   &Input {
     display: inline-block;
     outline: 0;
-    width: calc(100% - 144px);
-    background-color: #fff;
-    border: 1px solid #f3f3f3;
+    width: calc(100% - 196px);
+    background-color: color(white, 1);
+    border: 1px solid color(white, 3);
     padding: 14px 16px;
+    margin-right: 8px;
     font-weight: 400;
     transition: all 0.3s ease;
   }
-  &Button {
-    display: inline-block;
-    outline: 0;
-    width: 136px;
-    border: 1px solid #414141;
-    margin-left: 8px;
-    padding: 14px 24px;
-    color: #fff;
-    background-color: #414141;
-    transition: all 0.3s ease;
-    &:hover {
-      background-color: transparent;
-      border-color: #fff;
-    }
-  }
-  &About {
-    float: left;
-    max-width: 372px;
-    margin-right: 240px;
-    &Desc {
-      margin-bottom: 32px;
-      span {
-        font-style: italic;
-      }
-    }
-  }
-  &Logo {
+}
+
+.about {
+  float: left;
+  max-width: 372px;
+  margin-right: 240px;
+  &Desc {
     margin-bottom: 32px;
-    &Link {
-      display: block;
-      text-decoration: none;
-    }
-    &Img {
-      display: block;
-      height: 64px;
+    span {
+      font-style: italic;
     }
   }
-  &Sosmed {
-    font-size: 0;
-    &Title {
-      display: inline-block;
-      vertical-align: middle;
-      padding-right: 16px;
-      margin-bottom: 0;
-    }
-    &List {
-      display: inline-block;
-      vertical-align: middle;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      @include clearfix;
-    }
-    &Item {
-      float: left;
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    &Link {
-      display: block;
-      text-decoration: none;
-      img {
-        display: block;
-        height: 24px;
-      }
-    }
+}
+
+.logo {
+  margin-bottom: 32px;
+  &Link {
+    display: block;
+    text-decoration: none;
   }
-  &Nav {
-    float: right;
+  &Img {
+    display: block;
+    height: 64px;
+  }
+}
+
+.sosmed {
+  font-size: 0;
+  &Title {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 16px;
+    margin-bottom: 0;
+  }
+  &List {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     @include clearfix;
-    &Item {
-      float: left;
-      margin-right: 80px;
-      &:last-child {
-        margin-right: 0;
-        ul li {
-          &:first-child {
-            color: #fff;
-          }
-          &:last-child {
-            max-width: 264px;
-          }
+  }
+  &Item {
+    float: left;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &Link {
+    display: block;
+    text-decoration: none;
+    transition: all .3s ease;
+    &:hover {
+      transform: translateY(-4px);
+    }
+    img {
+      display: block;
+      height: 24px;
+    }
+  }
+}
+
+.navigation {
+  float: right;
+  @include clearfix;
+  &Item {
+    float: left;
+    margin-right: 80px;
+    &:last-child {
+      margin-right: 0;
+      ul li {
+        &:first-child {
+          color: color(white, 1);
+        }
+        &:last-child {
+          max-width: 264px;
         }
       }
     }
   }
-  &Title {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    font-weight: 700;
-  }
-  &Menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    &Item {
-      color: #a0a0a0;
-      margin-bottom: 8px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &Link {
-      display: block;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      &:hover {
-        color: #fff;
-      }
+}
+
+.title {
+  @include font-size(20);
+  font-weight: fw(bold);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &Item {
+    color: color(black, 4);
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
-  &Author,
-  &Copyright {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    margin-bottom: 0;
-  }
-  &Author {
-    float: left;
-    span {
-      color: #fff;
-      font-weight: 700;
+  &Link {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: color(white, 1);
     }
   }
-  &Copyright {
-    float: right;
+}
+
+.author,
+.copyright {
+  @include font-size(14);
+  margin-bottom: 0;
+}
+
+.author {
+  float: left;
+  span {
+    color: color(white, 1);
+    font-weight: fw(bold);
   }
+}
+
+.copyright {
+  float: right;
 }

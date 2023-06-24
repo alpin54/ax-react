@@ -1,0 +1,11 @@
+@import "application/style/_asset.scss";
+
+.product {
+  padding: 16px 0 64px;
+}
+
+.list {
+  margin-left: -12px;
+  margin-right: -12px;
+  @include clearfix;
+}

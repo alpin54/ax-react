@@ -1,0 +1,12 @@
+@import "application/style/_asset.scss";
+
+.buttonText {
+  position: relative;
+  @include font-size(16);
+  color: color(primary);
+  transition: all 0.3s ease;
+  &:hover {
+    color: color(black, 3);
+  }
+}
+

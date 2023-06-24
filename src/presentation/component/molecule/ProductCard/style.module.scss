@@ -1,59 +1,58 @@
-@mixin card {
+@import "application/style/_asset.scss";
+
+.card {
   float: left;
   width: 25%;
   padding: 12px;
 }
 
-.card {
-  $c: &;
-  @include card;
-  &Box {
-    position: relative;
-    overflow: hidden;
-    &:hover {
-      #{$c} {
-        &Img img {
-          transform: scale(1.1);
-        }
-      }
+.box {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    .image img {
+      transform: scale(1.1);
     }
   }
-  &Link {
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: zi(card-link);
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  position: relative;
+  padding-bottom: 125%;
+  overflow: hidden;
+  img {
+    display: block;
     position: absolute;
-    top: 0;
     left: 0;
-    z-index: 2;
+    top: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
   }
-  &Img {
-    position: relative;
-    padding-bottom: 125%;
-    overflow: hidden;
-    img {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-  }
-  &Txt {
-    padding: 16px 0;
-  }
-  &Title {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-bottom: 4px;
-  }
-  &Price {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    color: #707070;
-    margin-bottom: 0;
-  }
+}
+
+.text {
+  padding: 16px 0;
+}
+
+.title {
+  @include font-size(16);
+  font-weight: fw(bold);
+  margin-bottom: 4px;
+}
+
+.price {
+  @include font-size(18);
+  color: color(black, 3);
+  margin-bottom: 0;
 }

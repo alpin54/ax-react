@@ -1,19 +1,4 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-}
-@mixin headerLink {
-  display: block;
-  text-decoration: none;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  color: #707070;
-  padding: 16px 0;
-  transition: all 0.3s ease;
-}
+@import "application/style/_asset.scss";
 
 .header {
   position: fixed;
@@ -22,65 +7,71 @@
   z-index: 9;
   width: 100%;
   padding: 12px 0;
-  background-color: #fff;
+  background-color: color(white, 1);
   &Inner {
     position: relative;
     @include clearfix;
   }
-  &Logo {
-    float: left;
-    a {
-      text-decoration: none;
-    }
-    img {
-      display: block;
-      height: 40px;
-    }
-  }
-  &Tagline {
-    float: right;
-    display: block;
-    padding: 8px;
-    margin: 4px 0;
-    background-color: #111;
-    &Text {
-      color: #fff;
-      font-size: 1.6rem;
-      line-height: 1;
-      font-weight: 700;
-      margin-bottom: 0;
-    }
-  }
-  &Nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &Menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      @include clearfix;
-    }
-    &Item {
-      float: left;
-      margin-right: 24px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    &Link {
-      @include headerLink;
-      &:hover {
-        color: #111;
-      }
-      &Active {
-        @include headerLink;
-        color: #111;
-      }
-    }
-  }
   .burgerMenu {
     display: none;
+  }
+}
+
+.logo {
+  float: left;
+  a {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    height: 40px;
+  }
+}
+
+.hastag {
+  float: right;
+  display: block;
+  padding: 8px;
+  margin: 4px 0;
+  background-color: color(primary);
+  color: color(white, 1);
+  @include font-size(16);
+  line-height: 1;
+  font-weight: fw(bold);
+  margin-bottom: 0;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include clearfix;
+  &Item {
+    float: left;
+    margin-right: 24px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &Link {
+    display: block;
+    text-decoration: none;
+    @include font-size(16);
+    color: color(black, 3);
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    &:hover {
+      color: color(primary);
+    }
+    &.active {
+      color: color(primary);
+    }
   }
 }

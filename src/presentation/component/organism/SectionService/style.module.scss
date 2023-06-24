@@ -1,41 +1,38 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-}
+@import "application/style/_asset.scss";
 
 .service {
-  padding: 60px 0 32px;
-  &Head {
-    margin-bottom: 32px;
-    @include clearfix;
-  }
-  &Body {
-    margin-left: -12px;
-    margin-right: -12px;
-    @include clearfix;
-  }
-  &Caption {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 400;
-    color: #707070;
-    margin-bottom: 0;
-  }
-  &Title {
-    float: left;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 0;
-  }
-  &Btn {
-    float: right;
-    transition: all 0.3s ease;
-    &:hover {
-      color: #707070;
-    }
+  padding: 32px 0;
+}
+
+.head {
+  margin-bottom: 32px;
+  @include clearfix;
+}
+
+.body {
+  margin-left: -12px;
+  margin-right: -12px;
+  @include clearfix;
+}
+
+.caption {
+  @include font-size(16);
+  font-weight: fw(regular);
+  color: color(black, 3);
+  margin-bottom: 0;
+}
+
+.title {
+  float: left;
+  @include font-size(24);
+  font-weight: fw(bold);
+  margin-bottom: 0;
+}
+
+.button {
+  float: right;
+  transition: all 0.3s ease;
+  &:hover {
+    color: color(black, 3);
   }
 }

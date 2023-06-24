@@ -81,3 +81,19 @@ Step
 --
 1. Masuk terminal > cd project-name
 $ npm install react-router-dom
+
+/* ========================================================================== */
+Jika yang di return berupa html maka file extenstionnya file.jsx
+
+** JSX = Code JS tapi return html
+** JS = Code JS murni
+/* ========================================================================== */
+
+
+/* ==========================================================================
+   API
+   ========================================================================== */
+
+Komponen (Data APi) -> Model -> Infra/Api (use): Hooks of Data Fetching combine ftching (fectj, axios) + endpoint file
+
+Komponen (Data APi) -> Model -> Infra/Api (use): HTTP Request + endpoint file

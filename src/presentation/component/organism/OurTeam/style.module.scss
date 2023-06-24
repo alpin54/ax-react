@@ -1,0 +1,19 @@
+@import "application/style/_asset.scss";
+
+.team {
+  padding: 32px 0 64px;
+  &Head {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &Body {
+    margin-left: -12px;
+    margin-right: -12px;
+    @include clearfix;
+  }
+  &Title {
+    @include font-size(48);
+    font-weight: fw(bold);
+    margin-bottom: 0;
+  }
+}

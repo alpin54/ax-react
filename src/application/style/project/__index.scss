@@ -1,10 +1,9 @@
 /* ==========================================================================
-   Project Index
+   Init Index
    ========================================================================== */
 
-@import "init/_index";
-@import "atomic-design";
-// @import "components/_index";
-// @import "elements/_index";
-// @import "layouts/_index";
-// @import "pages/_index";
+@import "fonts";
+@import "variables/_index";
+@import "mixins/_index";
+@import "grid/_index";
+@import "default";

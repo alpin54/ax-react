@@ -1,8 +1,6 @@
-/* ==========================================================================
-   Elements Button
-  ========================================================================== */
+@import "application/style/_asset.scss";
 
-@mixin btn {
+.btn {
   display: inline-block;
   vertical-align: middle;
   min-width: 136px;
@@ -14,31 +12,40 @@
   text-align: center;
   overflow: hidden;
   border: 1px solid transparent;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  @include font-size(16);
   background-color: transparent;
   transition: all 0.3s ease;
-}
-
-.btn {
   &Primary {
-    @include btn;
-    background-color: #111;
-    color: #fff;
+    border-color: color(primary);
+    background-color: color(primary);
+    color: color(white, 1);
     &:hover {
       background-color: transparent;
-      border-color: #111;
-      color: #111;
+      border-color: color(primary);
+      color: color(primary);
     }
   }
   &Secondary {
-    @include btn;
-    background-color: #fff;
-    color: #111;
+    border-color: color(white, 1);
+    background-color: color(white, 1);
+    color: color(primary);
     &:hover {
       background-color: transparent;
-      border-color: #fff;
-      color: #fff;
+      border-color: color(white, 1);
+      color: color(white, 1);
+    }
+  }
+  &Tertiary {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 0;
+    border-color: color(black, 2);
+    background-color: color(black, 2);
+    color: color(white, 1);
+    &:hover {
+      background-color: transparent;
+      border-color: color(white, 1);
     }
   }
 }
+
