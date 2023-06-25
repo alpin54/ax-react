@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
-import formatRupiah from "application/util/formatRupiah";
+import formatRupiah from "core/util/formatRupiah";
 
 const ProductCard = (props) => {
   const { to, image, title, price } = props;

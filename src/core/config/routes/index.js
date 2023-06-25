@@ -5,6 +5,7 @@ import Produk from "presentation/container/page/Produk";
 import Galeri from "presentation/container/page/Galeri";
 import KontakKami from "presentation/container/page/KontakKami";
 import Sitemap from "presentation/container/page/Sitemap";
+import Practice from "presentation/container/page/Practice";
 import NotFound from "presentation/container/page/NotFound";
 
 const routeConfig = [
@@ -41,6 +42,11 @@ const routeConfig = [
   {
     path: "/sitemap",
     element: <Sitemap />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/practice",
+    element: <Practice />,
     errorElement: <NotFound />,
   },
 ];

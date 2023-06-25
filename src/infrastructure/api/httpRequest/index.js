@@ -1,12 +1,29 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
+
+const RequestMaster = (param) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios({ ...param })
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        setError({
+          status: error.response.status,
+          type: error.name,
+          message: error.message,
+        });
+      });
+  }, []);
+
+  return { data, error };
+};
 
 const httpRequest = (param) => {
-  const { method, url, data } = param;
-
-  if (method === "get") {
-    const response = axios.get(url, data);
-    return response.data;
-  }
+  return RequestMaster(param);
 };
 
 export default httpRequest;

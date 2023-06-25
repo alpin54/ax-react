@@ -1,11 +1,21 @@
 // --- core
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 
 // --- style
 import style from "./style.module.scss";
 
+// --- state
+import useCart from "core/state/cart";
+
 const Header = ({ activeMenu }) => {
+
+  const { totalCart } = useCart();
+  const [showNavigation, setShowNavigation] = useState(false);
+  const handleToggleNavigation = () => {
+    setShowNavigation(!showNavigation);
+  }
+  
   // --- data
   const data = {
     logo: {
@@ -39,11 +49,16 @@ const Header = ({ activeMenu }) => {
         text: "Kontak Kami",
         active: "kontak-kami",
       },
+      {
+        to: "/practice",
+        text: "Practice",
+        active: "practice",
+      },
     ],
   };
 
   return (
-    <div className={style.header}>
+    <div className={showNavigation ? `${style.header} ${style.headerShow}` : style.header}>
       <div className="container">
         <div className={style.headerInner}>
           <div className={style.logo}>
@@ -73,7 +88,9 @@ const Header = ({ activeMenu }) => {
               })}
             </ul>
           </div>
+          <button type="button" onClick={handleToggleNavigation}>Burger Menu</button>
           <span className={style.hastag}>#TAKETHELEAP!</span>
+          <span className={style.hastag}>TOTAL : {totalCart}</span>
         </div>
       </div>
     </div>

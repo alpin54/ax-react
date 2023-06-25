@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 
 // styles
-import "application/style/app.scss";
+import "core/style/app.scss";
 
 import App from "./presentation/container/app";
 

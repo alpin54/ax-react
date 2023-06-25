@@ -1,9 +1,9 @@
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
 const ENDPOINT = {
-  users: `${BASE_URL}/users`,
-  posts: `${BASE_URL}/posts`,
-  albums: `${BASE_URL}/albums`,
+  USERS: `${BASE_URL}/users`,
+  POSTS: `${BASE_URL}/posts`,
+  ALBUMS: `${BASE_URL}/albums`,
 };
 
 export default ENDPOINT;

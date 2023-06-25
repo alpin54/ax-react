@@ -7,6 +7,7 @@ import Button from "presentation/component/atom/Button";
 import style from "./style.module.scss";
 
 const Footer = () => {
+  
   const data = {
     logo: {
       to: "/",

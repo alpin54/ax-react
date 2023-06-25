@@ -1,0 +1,8 @@
+npm install react-slick
+npm install slick-carousel
+
+CSR
+(Client Side Rendering)
+
+SSR -> SEO
+(Server SIde Rendering)
