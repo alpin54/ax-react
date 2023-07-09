@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Getting Started NextJS
+   ========================================================================== */
+
+Prerequisite
+--
+next 13.4.6+
+sudo npm install -g n
+sudo n stable
+
+Next Step
+--
+
+$npx create-next-app@latest
