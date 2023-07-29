@@ -8,7 +8,20 @@ next 13.4.6+
 sudo npm install -g n
 sudo n stable
 
+Next Version
+--
+
+NextJS: 13.4.7 -> routing dir /pages (URL API) and dir /app (URL FE/URL Informational)
+NextJS: 13.1.2 -> routing dir /pages (not dir /app)
+
 Next Step
 --
 
 $npx create-next-app@latest
+
+NextJS vs ReactJS
+
+- Code Spliting
+- Simple Routing 
+- ReactJS -> CSR | NextJS -> SSR
+- SEO Support
